@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <input type="date" name="" id="dateInput" />
+      <button>id= "displayButton" type="button">display date</button>
+      <p>
+        id="messageParagraph"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam saepe unde cupiditate
+        quisquam labore
+      </p>
+    </main>
+    <footer></footer>
+    <script>
+      function displayDate() {
+        let messageParagraph = document.getElementById("messageParagraph");
+        let dateInput = document.getElementById("dateInput");
+        messageParagraph.innerText = dateInput.value;
+      }
+      window.onload = function init() {
+        const displayButton = document.getElementById("displatButton");
+        displayButton.onlick = displayDate;
+      };
+    </script>
+  </body>
+</html>

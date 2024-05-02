@@ -1,18 +1,11 @@
-"use strict"
-
+"use strict";
 
 function convertFtoC(fahrenheitTemperature) {
-var celsiusTempature = ((fahrenheitTemperature - 32) * 5) / 9;
-return celsiusTempature;
+  var celsiusTempature = ((fahrenheitTemperature - 32) * 5) / 9;
+  return celsiusTempature;
 }
 
 var f = 77;
 let c = convertFtoC(f);
 
-console.log(
-"The fahrenheit temperature of " +
-f +
-" is " +
-c + 
-" celsius."
-);
+console.log("The fahrenheit temperature of " + f + " is " + c + " celsius.");

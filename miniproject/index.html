@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream Shop</title>
+    <!-- Centered viewport -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body style="background-color: #ffffff">
+    <main>
+      <h3>Ice Cream Shop</h3>
+      <article>
+        <form id="orderForm">
+          <label for="scoopsInput">Number of Scoops:</label>
+          <input type="number" id="scoopsInput" min="1" value="1" />
+
+          <input type="radio" id="cone" value="cone" />
+          <label for="cone">Cone</label>
+
+          <input type="radio" id="cup" value="cup" />
+          <label for="cup">Cup</label>
+
+          <div id="toppingsContainer">
+            <fieldset>
+              <legend>Toppings:</legend>
+              <input type="checkbox" id="sprinkles" name="topping" value="sprinkles" />
+              <label for="sprinkles">Sprinkles ($0.50)</label><br />
+
+              <input type="checkbox" id="whippedCream" name="topping" value="whipped_cream" />
+              <label for="whippedCream">Whipped Cream ($0.25)</label><br />
+
+              <input type="checkbox" id="hotFudge" name="topping" value="hot_fudge" />
+              <label for="hotFudge">Hot Fudge ($1.25)</label><br />
+
+              <input type="checkbox" id="cherry" name="topping" value="cherry" />
+              <label for="cherry">Cherry ($0.25)</label><br /><br />
+            </fieldset>
+          </div>
+
+          <button type="submit">Submit Order</button>
+          <p>
+            Base price: $<span id="basePriceText"> xx.xxx</span><br />
+            Tax: $<span id="taxText"> xx.xxx</span><br />
+            Total due: $<span id="totalDueText"> xx.xxx</span>
+          </p>
+        </form>
+      </article>
+    </main>
+
+    <script>
+      "use strict";
+      function init() {
+        let submitButton = document.getElementById("submitButton");
+        submitButton.onclick = submitOrder;
+      }
+      window.onload = init;
+
+      function estimate() {
+        const scoopsInput = document.getElementById("scoopsInput");
+        const cone = document.getElementById("cone");
+        const cup = document.getElementById("cup");
+
+        const toppings = document.getElementsByName("topping");
+
+        const basePrice = document.getElementById("basePrice");
+        const tax = document.getElementById("tax");
+        const totalDue = document.getElementById("totalDue");
+
+        console.log(`estimate`);
+      }
+    </script>
+  </body>
+</html>

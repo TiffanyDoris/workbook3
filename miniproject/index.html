@@ -50,26 +50,32 @@
     </main>
 
     <script>
-      "use strict";
-      function init() {
-        let submitButton = document.getElementById("submitButton");
-        submitButton.onclick = submitOrder;
-      }
-      window.onload = init;
+            "use strict";
+            function init() {
+              let submitButton = document.getElementById("submitButton");
+              submitButton.onclick = submitOrder;
+            }
+            window.onload = init;
 
-      function estimate() {
-        const scoopsInput = document.getElementById("scoopsInput");
-        const cone = document.getElementById("cone");
-        const cup = document.getElementById("cup");
+            function estimate() {
+              const scoopsInput = document.getElementById("scoopsInput");
+              const cone = document.getElementById("cone");
+              const cup = document.getElementById("cup");
 
-        const toppings = document.getElementsByName("topping");
+              const toppings = document.getElementsByName("topping");
 
-        const basePrice = document.getElementById("basePrice");
-        const tax = document.getElementById("tax");
-        const totalDue = document.getElementById("totalDue");
+              const basePrice = document.getElementById("basePrice");
+              const tax = document.getElementById("tax");
+              const totalDue = document.getElementById("totalDue");
 
-        console.log(`estimate`);
-      }
+      let scoopsInput =scoopsInput
+      console.log(scoopsInput)scoopsInput.value
+
+
+              // console.log(`estimate`);
+
+
+            }
     </script>
   </body>
 </html>
